@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
 
 from app.config import tortoise_config
-from app.main_route import route
+from app.main_route import router
 
 
 def init(app: FastAPI):
@@ -12,7 +12,7 @@ def init(app: FastAPI):
 # 
 def init_routes(app: FastAPI):
     api_prefix = "/api"
-    app.include_router(route, prefix=f"{api_prefix}")
+    app.include_router(router, prefix=f"{api_prefix}")
 
 
 def init_db(app: FastAPI):
