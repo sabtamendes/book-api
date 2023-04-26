@@ -1,0 +1,12 @@
+venv/
+# arquivos de configuração específicos do ambiente
+.env
+*.pyc
+
+# diretórios de arquivos gerados automaticamente
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.db
+*.sqlite3
