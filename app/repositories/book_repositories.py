@@ -15,7 +15,6 @@ class BookRepository:
         return code
     
 
-
     async def get_all_books(self) -> List[Book]:
         return await Book.all()
     
@@ -28,6 +27,10 @@ class BookRepository:
 
     async def get_book_by_id(self, id: int) -> Book:
         return await Book.get(id=id)
+    
+
+    async def get_book_by_magicCode(self, magicCode: str) -> Book:
+        return await Book.get(magicCode=magicCode)
 
 
 

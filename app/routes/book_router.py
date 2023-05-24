@@ -32,6 +32,7 @@ async def get_book_by_id(id: int):
     return response
 
 #query params
-@router.get("/author/")
-async def get_author_by_query(author: str):
-    return {"author": author}
+@router.get("/book/", status_code=200, response_model=ResponseBookSchema)
+async def get_book_by_magicCode(magicCode: str):
+    response = await book_repositories.get_book_by_magicCode(magicCode)
+    return response
