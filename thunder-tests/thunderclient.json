@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "150721ba-4b24-4ec5-a67e-ec03781e3d10",
+    "colId": "28684fb0-a644-4912-b951-183621abae13",
+    "containerId": "",
+    "name": "GET  /api/books",
+    "url": "http://127.0.0.1:8000/api/books",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2023-05-24T17:09:54.668Z",
+    "modified": "2023-05-24T17:14:16.393Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8b1e95f1-51bd-4e5e-b9a2-91073f4be3ba",
+    "colId": "28684fb0-a644-4912-b951-183621abae13",
+    "containerId": "",
+    "name": "POST  /api/book",
+    "url": "http://127.0.0.1:8000/api/book",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-05-24T17:27:27.043Z",
+    "modified": "2023-05-24T17:59:26.884Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"A menina dos meus olhos\",\n    \"author\": \"ragatanga\",\n    \"professor\": \"sabta\",\n    \"magicCode\": \"KTOIIP\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
