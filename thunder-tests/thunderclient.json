@@ -3,12 +3,12 @@
     "_id": "150721ba-4b24-4ec5-a67e-ec03781e3d10",
     "colId": "28684fb0-a644-4912-b951-183621abae13",
     "containerId": "",
-    "name": "GET  /api/books",
-    "url": "http://127.0.0.1:8000/api/books",
+    "name": "GET  /api/book",
+    "url": "http://127.0.0.1:8000/api/book",
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-05-24T17:09:54.668Z",
-    "modified": "2023-05-24T17:14:16.393Z",
+    "modified": "2023-05-24T19:25:16.502Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -22,12 +22,31 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-05-24T17:27:27.043Z",
-    "modified": "2023-05-24T17:59:26.884Z",
+    "modified": "2023-05-24T18:19:49.878Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"title\": \"A menina dos meus olhos\",\n    \"author\": \"ragatanga\",\n    \"professor\": \"sabta\",\n    \"magicCode\": \"KTOIIP\"\n}",
+      "raw": "{\n    \"title\": \"A menina dos meus olhos\",\n    \"author\": \"ragatanga\",\n    \"professor\": \"sabta\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f95980d3-42c4-45d6-b994-cfea22a46c05",
+    "colId": "28684fb0-a644-4912-b951-183621abae13",
+    "containerId": "",
+    "name": "GET  /api/book/magicCode",
+    "url": "http://127.0.0.1:8000/api/book",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-05-24T19:32:38.369Z",
+    "modified": "2023-05-24T19:32:38.369Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"A menina dos meus olhos\",\n    \"author\": \"ragatanga\",\n    \"professor\": \"sabta\"\n}",
       "form": []
     },
     "tests": []
