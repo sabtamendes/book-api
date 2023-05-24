@@ -3,8 +3,8 @@
 from app.exceptions.exception import AppBaseException
 
 class BookValidationException(AppBaseException):
-    def __init__(self, description: str):
+    def __init__(self, category: str):
         super().__init__(
-            status_code=400,
-            context={"description": description},
+            status_code=404,
+            context={"category": category},
         )
