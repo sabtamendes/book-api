@@ -33,20 +33,39 @@
     "tests": []
   },
   {
-    "_id": "f95980d3-42c4-45d6-b994-cfea22a46c05",
+    "_id": "a4627e7e-6139-4128-a118-385b21a42fa0",
     "colId": "28684fb0-a644-4912-b951-183621abae13",
     "containerId": "",
-    "name": "GET  /api/book/magicCode",
-    "url": "http://127.0.0.1:8000/api/book",
-    "method": "POST",
+    "name": "PUT  /api/books/id",
+    "url": "http://127.0.0.1:8000/api/books/5",
+    "method": "PUT",
     "sortNum": 30000,
-    "created": "2023-05-24T19:32:38.369Z",
-    "modified": "2023-05-24T19:32:38.369Z",
+    "created": "2023-05-25T16:07:26.663Z",
+    "modified": "2023-05-25T16:09:15.646Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n    \"title\": \"A menina dos meus olhos\",\n    \"author\": \"ragatanga\",\n    \"professor\": \"sabta\"\n}",
+      "raw": "{\n    \"title\": \"huahauhau\",\n    \"author\": \"ragatanga\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "40740e77-f743-49c5-b30e-a10183331d39",
+    "colId": "28684fb0-a644-4912-b951-183621abae13",
+    "containerId": "",
+    "name": "DELETE  /api/book/id",
+    "url": "http://127.0.0.1:8000/api/book/5",
+    "method": "DELETE",
+    "sortNum": 40000,
+    "created": "2023-05-25T17:39:21.538Z",
+    "modified": "2023-05-25T17:40:08.662Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\": \"huahauhau\",\n    \"author\": \"ragatanga\"\n}",
       "form": []
     },
     "tests": []

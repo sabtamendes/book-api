@@ -19,3 +19,7 @@ class RegisterBookSchema(BaseModel):
 
 class MagicCodeSchema(BaseModel):
     magicCode: str
+
+class BookUpdateSchema(BaseModel):
+    title: str
+    author: str

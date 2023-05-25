@@ -1,5 +1,5 @@
-from fastapi import APIRouter
-from app.schemas.book_schema import  RegisterBookSchema, ResponseBookSchema, MagicCodeSchema
+from fastapi import APIRouter, Body
+from app.schemas.book_schema import  RegisterBookSchema, ResponseBookSchema, MagicCodeSchema, BookUpdateSchema
 from app.repositories.book_repositories import BookRepository
 from typing import List
 
@@ -31,8 +31,22 @@ async def get_book_by_id(id: int):
     response = await book_repositories.get_book_by_id(id)
     return response
 
-#query params
+# query params
 @router.get("/book/", status_code=200, response_model=ResponseBookSchema)
 async def get_book_by_magicCode(magicCode: str):
     response = await book_repositories.get_book_by_magicCode(magicCode)
+    return response
+
+@router.put("/books/{id}") # path  params
+async def update_book(id: int, book_data: BookUpdateSchema): #requisição por body
+    response = await book_repositories.update_book(id, book_data)
+    return response
+
+@router.delete("/book/{book_id}", status_code=204)
+async def delete_book(book_id: int):
+    await book_repositories.delete_book(book_id)
+
+@router.get("/ordenado")
+async def get_ordered_books():
+    response = await book_repositories.get_ordered_books()
     return response

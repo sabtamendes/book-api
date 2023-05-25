@@ -11,5 +11,3 @@ db_port = os.getenv("DATABASE_PORT")
 db_password = os.getenv("DATABASE_PASSWORD")
 db_name = os.getenv("DATABASE_NAME")
 db_user = os.getenv("DATABASE_USERNAME")
-
-print(IS_TEST_ENV, ENV, db_hostname, db_port, db_password, db_name, db_user )
