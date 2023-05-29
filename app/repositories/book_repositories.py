@@ -1,6 +1,4 @@
 from app.models.book_model import Book
-from tortoise.exceptions import DoesNotExist
-from tortoise.queryset import QuerySet
 from typing import List
 from app.schemas.book_schema import MagicCodeSchema, BookUpdateSchema
 import random

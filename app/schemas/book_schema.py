@@ -10,15 +10,15 @@ class ResponseBookSchema(BaseModel):
     createdAt: datetime
 
 
-
 class RegisterBookSchema(BaseModel):
     title: str
     author: str
-    professor: str
+    professor: str 
 
 
 class MagicCodeSchema(BaseModel):
     magicCode: str
+
 
 class BookUpdateSchema(BaseModel):
     title: str
