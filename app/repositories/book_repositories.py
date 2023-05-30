@@ -16,9 +16,6 @@ class BookRepository:
 
     async def get_all_books(self) -> List[Book]:
         response = await Book.all()
-
-        if len(response) == 0:
-            return []
         return response
     
     
