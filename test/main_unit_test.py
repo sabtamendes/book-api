@@ -7,18 +7,26 @@ from http import HTTPStatus
 @pytest.fixture
 def book_mock():
     return [
-        RegisterBookSchema(title='Title1', author='Author1', professor='Professor1', magicCode="TLCDXW"),
-        RegisterBookSchema(title='Title2', author='Author2', professor='Professor2', magicCode="IBWOTJ")
+        RegisterBookSchema(id= 1, title='Title1', author='Author1', professor='Professor1', magicCode="TLCDXW", createdAt= "2023-05-29T18:10:28.871379+00:00"),
+        RegisterBookSchema(id= 2, title='Title2', author='Author2', professor='Professor2', magicCode="IBWOTJ", createdAt= "2023-05-29T18:10:28.871379+00:00")
            ]
 
 @pytest.fixture
 def register_book_mock():
     return MagicCodeSchema(magicCode="TLCDXW")
 
-
-
 class TestBookRepository:
-    
+     
+    @pytest.mark.asyncio
+    async def test_get_all_books_success(self, book_mock):
+        books = BookRepository()
+
+        books.get_all_books = AsyncMock(return_value=book_mock)
+
+        all_books =  await books.get_all_books()
+        assert all_books == book_mock # igual um array de dicionários
+
+ 
     @pytest.mark.asyncio
     async def test_post_book_success(self, register_book_mock):
         book = BookRepository()
@@ -50,15 +58,9 @@ class TestBookRepository:
         assert result == HTTPStatus.NOT_ACCEPTABLE
 
 
-    @pytest.mark.asyncio
-    async def test_get_all_books(self, book_mock):
-        book_ = BookRepository()
+   
 
-        book_.get_all_books = AsyncMock(return_value=book_mock)
-
-        books =  await book_.get_all_books()
-        assert books == books
-
-
+    # @pytest.mark.asyncio
+    # async def test_get_book_by_id_success(self,)
 
 

@@ -56,18 +56,27 @@
     "colId": "28684fb0-a644-4912-b951-183621abae13",
     "containerId": "",
     "name": "DELETE  /api/book/id",
-    "url": "http://127.0.0.1:8000/api/book/5",
+    "url": "http://127.0.0.1:8000/api/book/22",
     "method": "DELETE",
     "sortNum": 40000,
     "created": "2023-05-25T17:39:21.538Z",
-    "modified": "2023-05-25T17:40:08.662Z",
+    "modified": "2023-05-29T18:04:49.468Z",
     "headers": [],
     "params": [],
-    "body": {
-      "type": "json",
-      "raw": "{\n    \"title\": \"huahauhau\",\n    \"author\": \"ragatanga\"\n}",
-      "form": []
-    },
+    "tests": []
+  },
+  {
+    "_id": "d4fed293-ea9f-4030-8a07-d2f44f531ff0",
+    "colId": "28684fb0-a644-4912-b951-183621abae13",
+    "containerId": "",
+    "name": "GET  /api/book/id",
+    "url": "http://127.0.0.1:8000/api/book/1",
+    "method": "GET",
+    "sortNum": 25000,
+    "created": "2023-05-29T18:16:21.669Z",
+    "modified": "2023-05-29T18:23:56.408Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]

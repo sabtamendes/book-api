@@ -1,10 +1,10 @@
 from app.models.book_model import Book
-from typing import List
 from app.schemas.book_schema import MagicCodeSchema, BookUpdateSchema
+from fastapi import HTTPException
 import random
 import string
-
-
+from typing import List
+from tortoise.exceptions import DoesNotExist
 
 
 class BookRepository:
@@ -15,7 +15,11 @@ class BookRepository:
     
 
     async def get_all_books(self) -> List[Book]:
-        return await Book.all()
+        response = await Book.all()
+
+        if len(response) == 0:
+            return []
+        return response
     
     
     async def post_book(self, title, author, professor) -> MagicCodeSchema:
@@ -25,8 +29,15 @@ class BookRepository:
 
 
     async def get_book_by_id(self, id: int) -> Book:
-        return await Book.get(id=id)
-    
+        try:
+            response = await Book.get(id=id)
+            return response
+        except DoesNotExist:
+            raise HTTPException(status_code=404, detail="Book not found")
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
+
+
 
     async def get_book_by_magicCode(self, magicCode: str) -> Book:
         return await Book.get(magicCode=magicCode)
