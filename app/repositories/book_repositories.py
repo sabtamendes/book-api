@@ -62,7 +62,7 @@ class BookRepository:
 
     @staticmethod
     async def get_ordered_books():
-        query = Book.all().order_by('-title')
+        query = Book.all().order_by('id')
         books = await query
         return books
 
