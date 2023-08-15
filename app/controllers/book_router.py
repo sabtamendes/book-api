@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from fastapi import APIRouter, Body
 from app.schemas.book_schema import  RegisterBookSchema, ResponseBookSchema, MagicCodeSchema, BookUpdateSchema
 from app.repositories.book_repositories import BookRepository
@@ -9,7 +8,7 @@ router = APIRouter()
 book_repositories = BookRepository()
 
 
-@router.get("/health")
+# @router.get("/health")
 async def read_health():
     return {"message": "Hello World"}
 
@@ -51,11 +50,3 @@ async def delete_book(book_id: int):
 async def get_ordered_books():
     response = await book_repositories.get_ordered_books()
     return response
-=======
-from fastapi import APIRouter
-from app.controllers.book_router import router 
-
-route = APIRouter()
-
-route.include_router(router, prefix="/api")
->>>>>>> c63b13b (feat: alteração)

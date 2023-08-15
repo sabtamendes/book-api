@@ -2,7 +2,11 @@ from fastapi import FastAPI
 from tortoise.contrib.fastapi import register_tortoise
 
 from app.config import tortoise_config
+<<<<<<< HEAD
 from app.main_route import router
+=======
+from app.routes.book_router import router
+>>>>>>> c63b13b (feat: alteração)
 
 
 def init(app: FastAPI):

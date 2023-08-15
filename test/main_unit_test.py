@@ -57,7 +57,29 @@ class TestBookRepository:
         result = await book.post_book("Title1", 1, "Professor1")
         assert result == HTTPStatus.UNPROCESSABLE_ENTITY
 
+<<<<<<< HEAD
 
    
 
+=======
+    # should return a book when the id exists
+    @pytest.mark.asyncio
+    async def test_get_book_by_id_success(self, register_book_mock):
+        book = BookRepository()
+
+        book.get_book_by_id = AsyncMock(return_value=register_book_mock)
+
+        result = await book.get_book_by_id(id=1)
+        assert result == register_book_mock
+    
+    # should return a message `Book not found` when the id doesnt exists
+    @pytest.mark.asyncio
+    async def test_get_book_by_id_not_exists(self, register_book_mock):
+        book = BookRepository()
+
+        book.get_book_by_id = AsyncMock(return_value=register_book_mock)
+
+        result = await book.get_book_by_id(id="2")
+        assert result == register_book_mock
+>>>>>>> c63b13b (feat: alteração)
 

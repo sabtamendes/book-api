@@ -30,7 +30,11 @@ class BookRepository:
             response = await Book.get(id=id)
             return response
         except DoesNotExist:
+<<<<<<< HEAD
             raise HTTPException(status_code=404, detail="Book not found")
+=======
+            raise HTTPException(status_code=404, detail="Not Found")
+>>>>>>> c63b13b (feat: alteração)
         except Exception as e:
             raise HTTPException(status_code=500, detail=str(e))
 
